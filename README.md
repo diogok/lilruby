@@ -1,8 +1,8 @@
-# Dummy Ruby Web App
+# Little Ruby Web App
 
-This a dummy Ruby Web App, just to get the basics.
+This a little Ruby Web App, just to get the basics.
 
-It uses what I use the most: Mustache templates and CouchDB, with sinatra for the main app stuff.
+It uses what I like to use the most: Mustache templates and CouchDB, with sinatra for the main app stuff.
 
 ## Installing and running
 
@@ -21,20 +21,20 @@ You will need ruby, as expected:
 
 Them bundler, to deal with dependencies:
 
-    # gem install bundle
+    # gem install bundler
 
 Use bundler to solve dependencies (take a look at Gemfile):
 
     $ bundle install
 
-Install CouchDB and create our database:
+Install CouchDB and create our little database:
 
     # aptitude install couchdb
     # curl -X PUT http://localhost:5984/lilruby
 
 Run the tests:
 
-    $ rspec app_test.rv
+    $ rspec app_test.rb
 
 Run the application:
     
@@ -43,9 +43,9 @@ Run the application:
 
 ## The app
 
-Does nothing, really, but is organized as follows, check them all:
+Does nothing, really. But is organized as follow, check them all:
 
-- At config.yml you got environment settings
+- At config.yml you got environment specific settings
 - At config.ru you get the startup script
 - At app.rb it's the base application
 - At public the assets to be served (js, css, etc... ), with bootstrap stuff
