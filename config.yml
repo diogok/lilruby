@@ -1,0 +1,6 @@
+development:
+    couchdb: "http://localhost:5984/lilruby"
+test:
+    couchdb: "http://localhost:5984/lilruby"
+production:
+    couchdb: "http://admin:admin@localhost:5984/lilruby"
