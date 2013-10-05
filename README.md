@@ -19,6 +19,13 @@ You will need ruby, as expected:
 
     # aptitude install ruby
 
+Install RVM for ruby versions control, them install jRuby:
+
+    $ curl -L https://get.rvm.io | bash -s stable
+    $ echo 'source /home/diogo/.rvm/scripts/rvm' >> ~/.bashrc
+    $ rvm install jruby
+    $ rvm use jruby
+
 Them bundler, to deal with dependencies:
 
     # gem install bundler
@@ -38,13 +45,13 @@ Run the tests:
 
 Run the application:
     
-    $ shotgun config.ru
-
+    $ rackup
 
 ## The app
 
 Does nothing, really. But is organized as follow, check them all:
 
+- At .ruby-version we tell to use jruby as ruby version
 - At config.yml you got environment specific settings
 - At config.ru you get the startup script
 - At app.rb it's the base application
@@ -59,9 +66,9 @@ Does nothing, really. But is organized as follow, check them all:
 - rspec for tests
 - sinatra-mustache for logicless templating(acting as views, without boring classes)
 - sinatra-config-file for config handling
+- sinatra-reloader  (from sinatra-contrib) for code reload
 - rest-client for rest consuming (for couchdb)
 - multi\_json for json handling (for couchdb)
-- shotgun for app reloading
 
 And I guess that's it, for now.
 

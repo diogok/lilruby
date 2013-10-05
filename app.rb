@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/config_file'
 require 'sinatra/mustache'
+require "sinatra/reloader" if development?
 require 'rest-client'
 require 'multi_json'
 
