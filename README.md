@@ -47,11 +47,16 @@ Run the application:
     
     $ rackup
 
+Create deployable war:
+
+    $ warble war
+
 ## The app
 
 Does nothing, really. But is organized as follow, check them all:
 
 - At .ruby-version we tell to use jruby as ruby version
+- At Gemfile the dependencies
 - At config.yml you got environment specific settings
 - At config.ru you get the startup script
 - At app.rb it's the base application
@@ -69,6 +74,7 @@ Does nothing, really. But is organized as follow, check them all:
 - sinatra-reloader  (from sinatra-contrib) for code reload
 - rest-client for rest consuming (for couchdb)
 - multi\_json for json handling (for couchdb)
+- warbler is used to generate deployable war file
 
 And I guess that's it, for now.
 

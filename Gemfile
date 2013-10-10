@@ -10,3 +10,6 @@ gem 'rest-client'
 gem 'rspec'
 gem 'rack-test'
 
+gem 'zip-zip'
+gem 'warbler'
+
