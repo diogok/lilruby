@@ -22,7 +22,7 @@ You will need ruby, as expected:
 Install RVM for ruby versions control, them install jRuby:
 
     $ curl -L https://get.rvm.io | bash -s stable
-    $ echo 'source /home/diogo/.rvm/scripts/rvm' >> ~/.bashrc
+    $ echo 'source $HOME/.rvm/scripts/rvm' >> ~/.bashrc
     $ rvm install jruby
     $ rvm use jruby
 
