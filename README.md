@@ -15,6 +15,8 @@ Now clone the app, and enter it's directory:
     $ git clone git@github.com:diogok/lilruby.git 
     $ cd lilruby
 
+### Manual
+
 You will need ruby, as expected:
 
     # aptitude install ruby
@@ -49,7 +51,7 @@ Run the application:
 
 Create deployable war:
 
-    $ warble war
+    $ RACK_ENV=production warble war
 
 ## The app
 
