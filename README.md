@@ -15,7 +15,26 @@ Now clone the app, and enter it's directory:
     $ git clone git@github.com:diogok/lilruby.git 
     $ cd lilruby
 
+### Vagrant
+
+You can use [Vagrant](http://vagrantup.com) to create a dev environment without much work, just download and install vagrant and virtualbox (or other).
+
+To start the machine use:
+
+    $ vagrant up
+
+To run the server:
+
+    $ vagrant ssh -c 'cd /vagrant && rackup'
+
+To simply access the machine created use "vagrant ssh". This source directory is shared between both.
+
+Rackup(your app) you be available at [port 9494](http://localhost:9494) and couchdb at [port 5999](http://localhost:5999).
+
+
 ### Manual
+
+If not using vagrant(greatly recommended), you can do thing manually.
 
 You will need ruby, as expected:
 
