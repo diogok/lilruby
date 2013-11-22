@@ -31,9 +31,11 @@ service couchdb start
 # setting couchdb to always start
 cp /etc/rc.local /etc/rc.local.bkp
 sudo sed -e 's/exit/#exit/g' /etc/rc.local.bkp > /etc/rc.local
-echo "service couchdb start" >> /etc/rc.local
+echo "/etc/init.d/couchdb start" > /root/couchdb.sh
+chmod +x /root/couchdb.sh
+echo "at now + 30 seconds -f /root/couchdb.sh" >> /etc/rc.local
 
 # create databases
-curl -x POST http://localhost:5984/lilruby
-curl -x POST http://localhost:5984/lilruby_test
+curl -X POST http://localhost:5984/lilruby
+curl -X POST http://localhost:5984/lilruby_test
 
