@@ -17,7 +17,7 @@ Now clone the app, and enter it's directory:
 
 ### Vagrant
 
-You can use [Vagrant](http://vagrantup.com) to create a dev environment without much work, just download and install vagrant and virtualbox (or other).
+You can use [Vagrant](http://vagrantup.com) to create a dev environment without too much work, just download and install vagrant and virtualbox.
 
 To start the machine use:
 
@@ -27,14 +27,14 @@ To run the server:
 
     $ vagrant ssh -c 'cd /vagrant && rackup'
 
-To simply access the machine created use "vagrant ssh". This source directory is shared between both.
+To simply access the machine created use "vagrant ssh". This source directory is shared between both at the vms /vagrant.
 
 Rackup(your app) you be available at [port 9494](http://localhost:9494) and couchdb at [port 5999](http://localhost:5999).
 
 
 ### Manual
 
-If not using vagrant(greatly recommended), you can do thing manually.
+If not using vagrant(greatly recommended), you can do things manualy.
 
 You will need ruby, as expected:
 
@@ -46,6 +46,7 @@ Install RVM for ruby versions control, them install jRuby:
     $ echo 'source $HOME/.rvm/scripts/rvm' >> ~/.bashrc
     $ rvm install jruby
     $ rvm use jruby
+    $ cd .
 
 Them bundler, to deal with dependencies:
 
@@ -84,6 +85,8 @@ Does nothing, really. But is organized as follow, check them all:
 - At public the assets to be served (js, css, etc... ), with bootstrap stuff
 - At views are the mustache templates
 - At app\_test.rb, the test suite
+- At Vagrantfile the dev vms configuration
+- At bootstrap the installation script for the dev vm
 
 ### How it works
 
@@ -96,6 +99,7 @@ Does nothing, really. But is organized as follow, check them all:
 - rest-client for rest consuming (for couchdb)
 - multi\_json for json handling (for couchdb)
 - warbler is used to generate deployable war file
+- vagrant for development environment
 
 And I guess that's it, for now.
 
