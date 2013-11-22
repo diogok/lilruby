@@ -10,6 +10,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provision :shell, :path => "bootstrap.sh"
 
     config.vm.network :forwarded_port, host: 9494, guest: 9292 # rackup
-    config.vm.network :forwarded_port, host: 5984, guest: 5999 # couchdb
+    config.vm.network :forwarded_port, host: 5999, guest: 5984 # couchdb
 end
 
