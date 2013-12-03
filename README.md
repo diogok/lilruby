@@ -4,7 +4,11 @@ This a little Ruby Web App, just to get the basics.
 
 It uses what I like to use the most: Mustache templates and CouchDB, with sinatra for the main app stuff.
 
-## Installing and running
+## Deploy
+
+You can deploy the war(read dev below) to any java container (like [Tomcat](http://tomcat.apache.org/)), or you can deploy a [Docker](http://docker.io) container.
+
+## Dev 
 
 Start with git, obviously:
 
