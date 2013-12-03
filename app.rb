@@ -5,8 +5,8 @@ require "sinatra/reloader" if development?
 require 'rest-client'
 require 'multi_json'
 
-config_file 'config.yml'
-
+config_file ENV['config'] || 'config.yml'
+ 
 def couch_get(url="") 
     r = RestClient.get "#{Sinatra::Application.settings.couchdb}#{url}"
     MultiJson.load(r.to_str, :symbolize_keys => true)
