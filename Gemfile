@@ -10,6 +10,6 @@ gem 'rest-client'
 gem 'rspec'
 gem 'rack-test'
 
-gem 'zip-zip'
-gem 'warbler'
+gem 'rubyzip', '1.0.0'
+gem 'warbler', '1.4.0'
 

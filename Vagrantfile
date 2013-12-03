@@ -11,5 +11,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     config.vm.network :forwarded_port, host: 9494, guest: 9292 # rackup
     config.vm.network :forwarded_port, host: 5999, guest: 5984 # couchdb
+    config.vm.network :forwarded_port, host: 8888, guest: 8080 # jetty
 end
 

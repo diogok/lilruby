@@ -29,6 +29,14 @@ To run the server:
 
 To simply access the machine created use "vagrant ssh". This source directory is shared between both at the vms /vagrant.
 
+You can also create a deployable war with
+
+    $ vagrant ssh -c 'cd /vagrant && warble executable war'
+
+You can deploy the war to a java container(like tomcat), or you can run the war with:
+
+    $ java -jar lilruby.war
+
 Rackup(your app) you be available at [port 9494](http://localhost:9494) and couchdb at [port 5999](http://localhost:5999).
 
 
@@ -71,7 +79,11 @@ Run the application:
 
 Create deployable war:
 
-    $ RACK_ENV=production warble war
+    $ RACK_ENV=production warble executable war
+
+You can deploy the war to a java container(like tomcat), or you can run the war with:
+
+    $ java -jar lilruby.war
 
 ## The app
 
